@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">20171102</string>
+    <string name="button_send">Send</string>
+    <string name="button_last_value">Last</string>
+    <string name="button_save">Save</string>
+    <string name="button_about">About Me</string>
+    <string name="lastvalue">None</string>
+    <string name="button_load">El último registro ingresado es:</string>
+    <string name="preference_file_key">com.a20171102.PREFERENCE_FILE_KEY</string>
+</resources>
