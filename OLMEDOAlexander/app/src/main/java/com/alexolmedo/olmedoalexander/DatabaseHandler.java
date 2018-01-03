@@ -84,13 +84,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(sql_select,null);
 
         if(cursor.moveToFirst()){
-            while (cursor.moveToNext()){
+            do{
                 Nota nota = new Nota();
                 nota.setCodigo(Integer.parseInt(cursor.getString(0)));
                 nota.setMateria(cursor.getString(1));
                 nota.setNota(cursor.getString(2));
                 gradeList.add(nota);
-            }
+            } while (cursor.moveToNext());
         }
         return gradeList;
     }

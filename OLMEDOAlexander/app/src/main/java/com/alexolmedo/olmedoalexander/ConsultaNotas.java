@@ -26,15 +26,29 @@ public class ConsultaNotas extends AppCompatActivity {
         setContentView(R.layout.activity_consulta_notas);
         indice = 0;
         notas = db.getAllGrades();
-    }
 
-    public void botonAnterior(View view){
         id = findViewById(R.id.editTextIDResultado);
         materia = findViewById(R.id.editTextMateriaResultado);
         nota = findViewById(R.id.editTextNotaResultado);
 
-        if (indice>0){
-            indice-=1;
+        if (notas.isEmpty()){
+            Toast toast = Toast.makeText(getApplicationContext(), "No existen registros", Toast.LENGTH_SHORT);
+            toast.show();
+        } else {
+            Nota actual = notas.get(indice);
+            id.setText(String.valueOf(actual.getCodigo()));
+            materia.setText(actual.getMateria());
+            nota.setText(actual.getNota());
+        }
+    }
+
+    public void botonAnterior(View view) {
+        id = findViewById(R.id.editTextIDResultado);
+        materia = findViewById(R.id.editTextMateriaResultado);
+        nota = findViewById(R.id.editTextNotaResultado);
+
+        if (indice > 0) {
+            indice -= 1;
             Nota actual = notas.get(indice);
             id.setText(String.valueOf(actual.getCodigo()));
             materia.setText(actual.getMateria());
@@ -50,15 +64,20 @@ public class ConsultaNotas extends AppCompatActivity {
 
     }
 
-    public void botonSiguiente(View view){
-        id = findViewById(R.id.editTextIDResultado);
-        materia = findViewById(R.id.editTextMateriaResultado);
-        nota = findViewById(R.id.editTextNotaResultado);
-        indice+=1;
-        Nota actual = notas.get(indice);
-        id.setText(String.valueOf(actual.getCodigo()));
-        materia.setText(actual.getMateria());
-        nota.setText(actual.getNota());
+    public void botonSiguiente(View view) {
+        if (indice < notas.size() - 1) {
+            id = findViewById(R.id.editTextIDResultado);
+            materia = findViewById(R.id.editTextMateriaResultado);
+            nota = findViewById(R.id.editTextNotaResultado);
+            indice += 1;
+            Nota actual = notas.get(indice);
+            id.setText(String.valueOf(actual.getCodigo()));
+            materia.setText(actual.getMateria());
+            nota.setText(actual.getNota());
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Se llegó al fin de la lista", Toast.LENGTH_SHORT);
+            toast.show();
+        }
 
     }
 }
