@@ -53,11 +53,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewNumeroNotas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewNotas"
-        app:layout_constraintStart_toEndOf="@+id/textViewNotas" />
 </android.support.constraint.ConstraintLayout>

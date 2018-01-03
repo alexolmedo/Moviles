@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class IngresoNotas extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class IngresoNotas extends AppCompatActivity {
         setContentView(R.layout.activity_ingreso_notas);
     }
 
+
+
     public void botonIngresarNota(View view){
         EditText materia = findViewById(R.id.editTextMateriaIngreso);
         EditText nota = findViewById(R.id.editTextNotaIngreso);
@@ -26,5 +29,10 @@ public class IngresoNotas extends AppCompatActivity {
         nota.setText("");
 
         Log.d("Busqueda", db.getGrade(1).toString());
+
+        //super.onBackPressed();
+        finish();
+        Toast toast = Toast.makeText(getApplicationContext(), "La nota se ingresó correctamente", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
