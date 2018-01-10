@@ -3,4 +3,5 @@
     android:id="@+id/clienteTextView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:textSize="18sp"></TextView>

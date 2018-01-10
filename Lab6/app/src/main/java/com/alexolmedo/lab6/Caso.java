@@ -64,12 +64,6 @@ public class Caso {
 
     @Override
     public String toString() {
-        return "Caso{" +
-                "_id=" + _id +
-                ", _cliente='" + _cliente + '\'' +
-                ", _fechaInicio='" + _fechaInicio + '\'' +
-                ", _fechaFin='" + _fechaFin + '\'' +
-                ", _estado='" + _estado + '\'' +
-                '}';
+        return _cliente;
     }
 }

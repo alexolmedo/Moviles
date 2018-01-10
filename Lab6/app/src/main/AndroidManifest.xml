@@ -27,11 +27,11 @@
         <activity
             android:name=".ResultadoBusqueda"
             android:label="Resultado de búsqueda"
-            android:parentActivityName=".ConsultaCasos" />
+            android:parentActivityName=".ListaCasos" />
         <activity
             android:name=".ListaCasos"
             android:label="Lista de Casos"
-            android:parentActivityName=".ConsultaCasos"></activity>
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
