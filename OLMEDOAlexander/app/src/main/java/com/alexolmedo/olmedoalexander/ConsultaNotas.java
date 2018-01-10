@@ -13,12 +13,12 @@ public class ConsultaNotas extends AppCompatActivity {
 
     DatabaseHandler db = new DatabaseHandler(this);
 
-    EditText id;
-    EditText materia;
-    EditText nota;
+    private EditText id;
+    private EditText materia;
+    private EditText nota;
 
-    List<Nota> notas;
-    int indice;
+    private List<Nota> notas;
+    private int indice;
 
 
     @Override

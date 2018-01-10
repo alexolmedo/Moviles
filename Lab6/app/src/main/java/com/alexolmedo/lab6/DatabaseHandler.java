@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Alexander on 19/12/2017.
  */
@@ -77,5 +80,21 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         return caso;
     }
 
+    public List<Caso> getAllCases(){
+        List<Caso> caseList = new ArrayList<Caso>();
 
+        String sql_select = "SELECT * FROM " + TABLE_CASES;
+
+        SQLiteDatabase db= this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(sql_select,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                Caso caso = new Caso(Integer.parseInt(cursor.getString(0)), cursor.getString(1),
+                        cursor.getString(2),cursor.getString(3),cursor.getString(4));
+                caseList.add(caso);
+            } while (cursor.moveToNext());
+        }
+        return caseList;
+    }
 }
