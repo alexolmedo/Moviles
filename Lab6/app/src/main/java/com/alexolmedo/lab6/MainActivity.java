@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void botonConsulta(View view) {
-        Intent intent = new Intent(this, ConsultaCasos.class);
+        Intent intent = new Intent(this, ListaCasos.class);
         startActivity(intent);
     }
 }

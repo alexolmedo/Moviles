@@ -29,8 +29,9 @@
             android:label="Resultado de búsqueda"
             android:parentActivityName=".ConsultaCasos" />
         <activity
-            android:name=".activity_lista_casos"
-            android:label="Lista de Casos"></activity>
+            android:name=".ListaCasos"
+            android:label="Lista de Casos"
+            android:parentActivityName=".ConsultaCasos"></activity>
     </application>
 
 </manifest>
