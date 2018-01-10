@@ -19,7 +19,7 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.sample_3, R.drawable.sample_4, R.drawable.sample_5, R.drawable.sample_6,
             R.drawable.sample_7, R.drawable.sample_8, R.drawable.sample_9};
 
-    public ImageAdapter (Context c){
+    public ImageAdapter(Context c) {
         mContext = c;
     }
 
@@ -42,11 +42,11 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
 
-        if(convertView == null){
+        if (convertView == null) {
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(185,185));
+            imageView.setLayoutParams(new GridView.LayoutParams(185, 185));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(8,8,8,8);
+            imageView.setPadding(8, 8, 8, 8);
         } else {
             imageView = (ImageView) convertView;
         }
