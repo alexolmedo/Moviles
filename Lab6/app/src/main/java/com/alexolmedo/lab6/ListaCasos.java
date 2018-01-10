@@ -32,7 +32,7 @@ public class ListaCasos extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String idCliente = String.valueOf(casos.get(position).get_id());
-                Intent intent = new Intent(ListaCasos.this, ResultadoBusqueda.class );
+                Intent intent = new Intent(getApplicationContext(), ResultadoBusqueda.class );
                 intent.putExtra(CASE_ID,idCliente);
                 startActivity(intent);
             }
