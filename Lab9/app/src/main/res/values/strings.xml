@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">Lab9</string>
+    <string name="long_string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue
+condimentum efficitur. Mauris hendrerit sodales egestas. Nunc vel porttitor massa.
+Proin sollicitudin, ante sit amet molestie faucibus, sapien arcu posuere dui, at
+venenatis nisl metus sit amet nulla. Suspendisse sagittis placerat lectus ac pharetra.
+Cras facilisis nisl ac enim sollicitudin, vel tristique mi tincidunt. Vestibulum rhoncus
+quis lorem ac aliquam. Vivamus hendrerit sem a turpis efficitur, at egestas lacus
+pretium. Cras id mi sit amet turpis volutpat dapibus. Phasellus venenatis mattis
+ornare. Duis sed justo tortor.
+Mauris bibendum vel libero at viverra. In vitae mollis nunc. Aenean ac porta elit, in
+laoreet ipsum. Maecenas eu massa diam. Morbi faucibus enim diam, eu consectetur
+justo auctor vitae. Maecenas a metus imperdiet, sodales velit eu, mollis massa. Nunc
+tempus volutpat erat sed mattis. Ut varius suscipit egestas. Nullam fermentum
+rhoncus magna porta mattis.
+Pellentesque pulvinar nibh at odio vestibulum, quis semper ipsum posuere. Sed
+tincidunt aliquet justo in luctus. Vestibulum efficitur rutrum euismod. In et tempus
+lorem, at semper mi. Vestibulum vel suscipit urna, ac pellentesque metus. Praesent
+eleifend convallis sagittis. Donec sit amet tempus risus. Integer cursus dapibus
+magna, ut condimentum nibh commodo at. Ut neque diam, rutrum ut blandit ac,
+semper id dui. In tempus nibh eget tincidunt porttitor. Morbi sit amet mauris felis.
+Praesent cursus consectetur nunc, eu tristique eros ultrices sit amet. Praesent ac odio
+non est porta sodales egestas at metus. Duis eget accumsan mauris. Sed fermentum
+aliquam ultrices.
+Etiam nec tincidunt odio, ac vehicula leo. Suspendisse volutpat ultrices sem. Sed nec
+mauris pharetra, aliquet leo sit amet, pretium augue. Nam blandit mi non mauris
+condimentum tincidunt. Curabitur pharetra euismod sem. Etiam dictum risus vitae
+massa malesuada dictum. Ut mattis ipsum vitae gravida laoreet. Donec posuere nisi
+sit amet tempus malesuada. Donec ullamcorper aliquam nulla, in efficitur tortor
+elementum ut. Aliquam erat volutpat. Suspendisse potenti. Suspendisse a massa
+feugiat urna ullamcorper volutpat.
+Suspendisse viverra purus vel risus accumsan, non vulputate elit condimentum.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Sed eu tortor ornare, tincidunt orci at, porttitor ipsum. Phasellus id porta
+quam. Ut finibus facilisis pharetra. Phasellus luctus, mi condimentum dapibus
+semper, tellus purus mattis diam, sed pellentesque nisl magna ut justo. Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Nulla eget tristique felis. Duis sagittis vitae
+neque vel mattis. In id felis velit. Sed nec mattis turpis.</string>
 </resources>
