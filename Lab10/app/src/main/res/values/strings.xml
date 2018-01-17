@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Lab10</string>
+    <string name="country_prompt">Escoja un país</string>
+    <string-array name="array_countries">
+        <item>Ecuador</item>
+        <item>Francia</item>
+        <item>Colombia</item>
+        <item>Argentina</item>
+    </string-array>
 </resources>
