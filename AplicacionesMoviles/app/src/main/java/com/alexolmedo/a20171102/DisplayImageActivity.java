@@ -9,6 +9,7 @@ import android.widget.Button;
 public class DisplayImageActivity extends AppCompatActivity {
 
     private Button buttonDetalles;
+    private Button buttonHistoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,15 @@ public class DisplayImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ControlWeb.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonHistoria = findViewById(R.id.buttonHistoria);
+        buttonHistoria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HistoryActivity.class);
                 startActivity(intent);
             }
         });
