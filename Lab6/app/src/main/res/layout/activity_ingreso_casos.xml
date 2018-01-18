@@ -79,7 +79,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="date"
+        android:clickable="true"
+        android:focusable="false"
+        android:editable="false"
         app:layout_constraintEnd_toEndOf="@+id/editTextCliente"
         app:layout_constraintTop_toBottomOf="@+id/editTextCliente" />
 
@@ -89,7 +91,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="date"
+        android:clickable="true"
+        android:focusable="false"
+        android:editable="false"
         app:layout_constraintEnd_toEndOf="@+id/editTextFechaInicio"
         app:layout_constraintTop_toBottomOf="@+id/editTextFechaInicio" />
 
