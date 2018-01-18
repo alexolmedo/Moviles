@@ -47,9 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Estado"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextEstado"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFechaFin" />
 
     <EditText
         android:id="@+id/editTextID"
@@ -92,16 +93,6 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextFechaInicio"
         app:layout_constraintTop_toBottomOf="@+id/editTextFechaInicio" />
 
-    <EditText
-        android:id="@+id/editTextEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/editTextFechaFin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFechaFin" />
-
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
@@ -113,6 +104,16 @@
         android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEstado" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEstado" />
+
+    <Spinner
+        android:id="@+id/spinnerEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/array_estado_caso"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFechaFin"
+        app:layout_constraintStart_toStartOf="@+id/editTextFechaFin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFechaFin" />
 
 </android.support.constraint.ConstraintLayout>

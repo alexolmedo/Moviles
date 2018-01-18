@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class IngresoCasos extends AppCompatActivity {
@@ -22,9 +23,9 @@ public class IngresoCasos extends AppCompatActivity {
         EditText cliente = findViewById(R.id.editTextCliente);
         EditText fechaInicio = findViewById(R.id.editTextFechaInicio);
         EditText fechaFin = findViewById(R.id.editTextFechaFin);
-        EditText estado = findViewById(R.id.editTextEstado);
-        Log.d("Insert", "Datos: "+id.getText()+cliente.getText()+fechaInicio.getText()+fechaFin.getText()+estado.getText());
-        db.addCaso(new Caso(Integer.parseInt(id.getText().toString()), cliente.getText().toString(),fechaInicio.getText().toString(),fechaFin.getText().toString(),estado.getText().toString()));
+        Spinner estado = findViewById(R.id.spinnerEstado);
+        Log.d("Insert", "Datos: "+id.getText()+cliente.getText()+fechaInicio.getText()+fechaFin.getText()+String.valueOf(estado.getSelectedItem()));
+        db.addCaso(new Caso(Integer.parseInt(id.getText().toString()), cliente.getText().toString(),fechaInicio.getText().toString(),fechaFin.getText().toString(),String.valueOf(estado.getSelectedItem())));
         Log.d("Insert", "Ingreso Correcto");
         Toast toast = Toast.makeText(getApplicationContext(), "Caso ingresado correctamente", Toast.LENGTH_SHORT);
         toast.show();
@@ -33,6 +34,6 @@ public class IngresoCasos extends AppCompatActivity {
         cliente.setText("");
         fechaInicio.setText("");
         fechaFin.setText("");
-        estado.setText("");
+        estado.setSelection(0);
     }
 }

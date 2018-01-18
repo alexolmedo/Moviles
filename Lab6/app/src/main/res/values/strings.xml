@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Expedientes</string>
+    <string-array name="array_estado_caso">
+        <item>Pendiente de dictamen</item>
+        <item>En apelación</item>
+        <item>Cerrado</item>
+    </string-array>
 </resources>
