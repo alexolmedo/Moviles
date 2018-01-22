@@ -22,6 +22,7 @@ public class IngresoCasos extends AppCompatActivity {
     private EditText fechaInicio;
     private EditText fechaFin;
     private Spinner estado;
+    private String fechaSelected;
 
     Calendar myCalendar = Calendar.getInstance();
 
@@ -36,18 +37,20 @@ public class IngresoCasos extends AppCompatActivity {
         fechaInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(IngresoCasos.this, myDateListenerStart, myCalendar
+                new DatePickerDialog(IngresoCasos.this, myDateListener, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                fechaInicio.setText(fechaSelected);
             }
         });
 
         fechaFin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(IngresoCasos.this, myDateListenerEnd, myCalendar
+                new DatePickerDialog(IngresoCasos.this, myDateListener, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                fechaFin.setText(fechaSelected);
             }
         });
     }
@@ -71,17 +74,10 @@ public class IngresoCasos extends AppCompatActivity {
         estado.setSelection(0);
     }
 
-    private DatePickerDialog.OnDateSetListener myDateListenerStart = new DatePickerDialog.OnDateSetListener() {
+    private DatePickerDialog.OnDateSetListener myDateListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-            fechaInicio.setText(new StringBuilder().append(dayOfMonth).append("/").append(month+1).append("/").append(year));
-        }
-    };
-
-    private DatePickerDialog.OnDateSetListener myDateListenerEnd = new DatePickerDialog.OnDateSetListener() {
-        @Override
-        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-            fechaFin.setText(new StringBuilder().append(dayOfMonth).append("/").append(month+1).append("/").append(year));
+            fechaSelected = new StringBuilder().append(dayOfMonth).append("/").append(month+1).append("/").append(year).toString();
         }
     };
 
