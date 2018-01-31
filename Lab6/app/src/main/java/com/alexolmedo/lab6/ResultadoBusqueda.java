@@ -12,6 +12,7 @@ public class ResultadoBusqueda extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado_busqueda);
 

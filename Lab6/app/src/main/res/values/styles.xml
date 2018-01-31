@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/tile</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:editTextColor">#ffffff</item>
+        <item name="android:buttonStyle">@style/ButtonColor</item>
+
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -17,6 +23,9 @@
         <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
+    <style name="ButtonColor" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textColor">#000000</item>
+    </style>
 
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
