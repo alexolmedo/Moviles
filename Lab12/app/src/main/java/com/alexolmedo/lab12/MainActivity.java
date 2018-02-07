@@ -2,6 +2,7 @@ package com.alexolmedo.lab12;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextView = (TextView) findViewById(R.id.label);
+        mTextView.setMovementMethod(new ScrollingMovementMethod());
     }
 
     public void makeRequest(View view) {
