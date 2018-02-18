@@ -6,4 +6,110 @@
     android:layout_height="match_parent"
     tools:context="com.alexolmedo.lab13.ResultadoConsulta">
 
+    <TextView
+        android:id="@+id/textID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="ID"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextID"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Email"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Address"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAddress"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Gender"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextGender"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="@+id/editTextID"
+        app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
 </android.support.constraint.ConstraintLayout>

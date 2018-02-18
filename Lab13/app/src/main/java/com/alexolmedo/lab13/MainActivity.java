@@ -19,7 +19,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
+
+    private DatabaseHandler db = new DatabaseHandler(this);
     private Button botonConsulta;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,18 +31,18 @@ public class MainActivity extends AppCompatActivity {
         botonConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                consultContacts();
                 Intent intent = new Intent(getApplicationContext(), ConsultaContactos.class);
                 startActivity(intent);
             }
         });
+        consultContacts();
     }
 
     public void consultContacts(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url2 ="https://api.androidhive.info/contacts/";
+        String url ="https://api.androidhive.info/contacts/";
         final JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                (Request.Method.GET, url2, null, new
+                (Request.Method.GET, url, null, new
                         Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                                         String address = c.getString("address");
                                         String gender = c.getString("gender");
                                         Log.d("Contacto", id+name+email+address+gender);
+                                        db.addContacto(new Contacto(id,name,email,address,gender));
                                     }
                                 }
                                 catch (final JSONException e) {

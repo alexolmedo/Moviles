@@ -22,7 +22,10 @@
             android:name=".ConsultaContactos"
             android:label="Consulta de Contactos"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".ResultadoConsulta"></activity>
+        <activity
+            android:name=".ResultadoConsulta"
+            android:label="Contacto"
+            android:parentActivityName=".ConsultaContactos"></activity>
     </application>
 
 </manifest>
